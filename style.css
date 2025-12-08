@@ -12,7 +12,7 @@ body {
     font-family: sans-serif; 
     
     /* VITAL FIX: Added hotspot coordinates (16 16) for browser compatibility */
-    cursor: url('AnyConv.com__1000097281 (1).cur') 16 16, default; 
+    cursor: url('https://raw.githubusercontent.com/sup2star/eureka.github.io/main/AnyConv.com__1000097281%20(1).cur') 16 16, default; 
 }
 
 /* --- 2. Homepage Button and Navigation Layout --- */
