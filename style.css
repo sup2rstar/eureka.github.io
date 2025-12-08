@@ -1,6 +1,6 @@
 /* style.css */
 
-/* --- 1. Full-Screen Background (Unchanged) --- */
+/* --- 1. Full-Screen Background & Custom Cursor --- */
 body {
     background-image: url('https://i.postimg.cc/5NPjYHJx/Sans-titre-1122-20251207182508.png'); 
     background-size: cover; 
@@ -10,14 +10,17 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: sans-serif; 
+    
+    /* NEW: Custom Cursor */
+    /* Use your custom image link here, followed by 'auto' as a fallback */
+    cursor: url('https://i.postimg.cc/xdJH5v52/1000097281.png'), auto; 
 }
 
-/* --- 2. Button and Navigation Layout (Fixed Positioning) --- */
+/* --- 2. Button and Navigation Layout (Overlay Removed) --- */
 .hero-section {
     min-height: 100vh;
     width: 100%;
-    /* Keep the overlay, but this is optional now that buttons are transparent */
-    background-color: rgba(0, 0, 0, 0.3); 
+    /* Overlay removed for full background brightness */
     padding: 20px;
     box-sizing: border-box; 
 }
@@ -25,35 +28,28 @@ body {
 nav {
     display: flex;
     width: 100%;
-    /* FIX: This pushes "Log In" to the far left and "Sign Up" to the far right */
     justify-content: space-between; 
-    padding: 0 50px; /* Adds space from the edge of the screen */
+    padding: 0 50px; 
     box-sizing: border-box;
 }
 
-/* --- 3. Button Styling (Bigger, Teal, and Transparent) --- */
+/* --- 3. Button Styling (Teal, Transparent, and Pointer Cursor) --- */
 .auth-button {
-    /* INCREASED PADDING to make the button 'square' (bigger) */
     padding: 15px 30px; 
     font-size: 18px;
     font-weight: bold;
-    
-    /* NEW: White Font */
     color: white; 
-    
-    /* NEW: Teal Color with 30% Transparency (Alpha value 0.3) */
-    background-color: rgba(0, 128, 128, 0.3); /* Teal color: RGB(0, 128, 128) */
-    
-    /* Border is also semi-transparent for consistency */
+    background-color: rgba(0, 128, 128, 0.3); 
     border: 2px solid rgba(255, 255, 255, 0.6); 
+    border-radius: 8px; 
     
-    border-radius: 8px; /* Slightly more rounded corners */
-    cursor: pointer;
+    /* VITAL: This ensures the cursor image changes to the standard hand when hovering */
+    cursor: pointer; 
+    
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .auth-button:hover {
-    /* When hovering, the background becomes fully opaque teal for emphasis */
     background-color: rgb(0, 128, 128); 
     border-color: white;
     text-decoration: none;
