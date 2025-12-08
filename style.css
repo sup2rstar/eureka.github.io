@@ -12,8 +12,8 @@ body {
     font-family: sans-serif; 
     
     /* NEW: Custom Cursor */
-    /* Use your custom image link here, followed by 'auto' as a fallback */
-    cursor: url('AnyConv.com__1000097281 (1).cur'), auto; 
+    /* VITAL FIX: Added hotspot coordinates (16 16) for browser compatibility */
+    cursor: url('AnyConv.com__1000097281 (1).cur') 16 16, default;
 }
 
 /* --- 2. Button and Navigation Layout (Overlay Removed) --- */
