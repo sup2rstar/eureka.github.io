@@ -1,0 +1,9 @@
+/* style.css */
+body {
+    background-image: url('https://i.postimg.cc/5NPjYHJx/Sans-titre-1122-20251207182508.png'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center center;
+    /* ... rest of your body styles ... */
+}
+/* ... rest of your button and layout styles ... */
