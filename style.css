@@ -11,16 +11,14 @@ body {
     min-height: 100vh;
     font-family: sans-serif; 
     
-    /* NEW: Custom Cursor */
     /* VITAL FIX: Added hotspot coordinates (16 16) for browser compatibility */
-    cursor: url('AnyConv.com__1000097281 (1).cur') 16 16, default;
+    cursor: url('AnyConv.com__1000097281 (1).cur') 16 16, default; 
 }
 
-/* --- 2. Button and Navigation Layout (Overlay Removed) --- */
+/* --- 2. Homepage Button and Navigation Layout --- */
 .hero-section {
     min-height: 100vh;
     width: 100%;
-    /* Overlay removed for full background brightness */
     padding: 20px;
     box-sizing: border-box; 
 }
@@ -35,6 +33,10 @@ nav {
 
 /* --- 3. Button Styling (Teal, Transparent, and Pointer Cursor) --- */
 .auth-button {
+    /* Styles needed for anchor tags to look like buttons */
+    text-decoration: none; 
+    display: inline-block; 
+    
     padding: 15px 30px; 
     font-size: 18px;
     font-weight: bold;
@@ -42,15 +44,73 @@ nav {
     background-color: rgba(0, 128, 128, 0.3); 
     border: 2px solid rgba(255, 255, 255, 0.6); 
     border-radius: 8px; 
-    
-    /* VITAL: This ensures the cursor image changes to the standard hand when hovering */
     cursor: pointer; 
-    
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .auth-button:hover {
     background-color: rgb(0, 128, 128); 
     border-color: white;
+}
+
+/* --- 4. Form Page Styling (For login.html and signup.html) --- */
+
+.center-content {
+    /* Ensures the background covers the whole form page too */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.75); /* Darker semi-transparent box for readability */
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    color: white;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.form-container form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form-container form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    /* VITAL FIX: Explicitly set background and text color for form inputs */
+    background-color: white; 
+    color: #333; /* Dark text color for contrast */
+}
+
+/* Style for the back to homepage link */
+.form-container p a {
+    color: #007bff; /* Blue text for the link */
     text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Form Submit Button uses the same style but is now 100% width */
+.form-container .auth-button {
+    width: 100%;
+    margin-top: 10px;
 }
