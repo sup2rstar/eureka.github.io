@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Eureka Homepage</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+
+    <div class="hero-section">
+        <nav>
+            <button class="auth-button">Log In</button>
+            
+            <button class="auth-button">Sign Up</button>
+        </nav>
+        
+        </div>
 
 </body>
 </html>
