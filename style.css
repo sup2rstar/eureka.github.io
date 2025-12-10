@@ -56,7 +56,6 @@ nav {
 /* --- 4. Form Page Styling (For login.html and signup.html) --- */
 
 .center-content {
-    /* Ensures the background covers the whole form page too */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,11 +63,10 @@ nav {
 }
 
 .form-container {
-    background-color: rgba(0, 0, 0, 0.75); /* Darker semi-transparent box for readability */
+    background-color: rgba(0, 0, 0, 0.75); 
     padding: 40px;
     border-radius: 10px;
     width: 350px;
-    /* Increased max-width for the learning hub content */
     max-width: 600px; 
     text-align: center;
     color: white;
@@ -92,15 +90,12 @@ nav {
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
-    
-    /* FIX: Explicitly set background and text color for form inputs */
     background-color: white; 
-    color: #333; /* Dark text color for contrast */
+    color: #333; 
 }
 
-/* Style for the back to homepage link */
 .form-container p a {
-    color: #007bff; /* Blue text for the link */
+    color: #007bff; 
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -111,15 +106,37 @@ nav {
     text-decoration: underline;
 }
 
-/* Form Submit Button uses the same style but is now 100% width */
 .form-container .auth-button {
     width: 100%;
     margin-top: 10px;
 }
 
 /* --- 5. Learning Hub Page Styling (For learn.html) --- */
+
+/* NEW: Container to hold Peacock and Text side-by-side */
+.peacock-header {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* NEW: Increased size of the Peacock image */
+.peacock-icon {
+    width: 150px; /* Increased from 100px */
+    height: auto;
+    margin-right: 20px; /* Space between peacock and text */
+}
+
+/* Adjust heading to fit next to the Peacock */
+.peacock-header h2 {
+    margin: 0;
+    font-size: 28px;
+    flex-grow: 1; /* Allows the text to take up remaining space */
+}
+
 .learning-options ul {
-    list-style: none; /* Removes bullet points */
+    list-style: none;
     padding: 0;
 }
 
@@ -127,8 +144,8 @@ nav {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    font-size: 18px;
-    padding: 8px;
+    font-size: 20px; /* Slightly larger text */
+    padding: 10px; /* Slightly larger padding */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     cursor: pointer;
@@ -136,13 +153,14 @@ nav {
 }
 
 .learning-options li:hover {
-    background-color: rgba(0, 128, 128, 0.3); /* Teal hover effect */
+    background-color: rgba(0, 128, 128, 0.3);
 }
 
+/* NEW: Increased size of the list images (flags/logos) */
 .option-icon {
-    width: 30px; /* Size for the small photo */
-    height: 30px;
-    object-fit: contain; /* Ensures the image fits nicely */
-    margin-right: 15px;
+    width: 50px; /* Increased from 30px */
+    height: 50px; /* Increased from 30px */
+    object-fit: contain;
+    margin-right: 20px; /* More space between image and text */
     border-radius: 4px;
 }
