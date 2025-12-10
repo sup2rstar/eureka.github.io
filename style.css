@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     font-family: sans-serif; 
     
-    /* VITAL FIX: Added hotspot coordinates (16 16) for browser compatibility */
+    /* VITAL FIX: Custom Cursor using Raw GitHub URL and Hotspot Fix */
     cursor: url('https://raw.githubusercontent.com/sup2star/eureka.github.io/main/AnyConv.com__1000097281%20(1).cur') 16 16, default; 
 }
 
@@ -68,6 +68,8 @@ nav {
     padding: 40px;
     border-radius: 10px;
     width: 350px;
+    /* Increased max-width for the learning hub content */
+    max-width: 600px; 
     text-align: center;
     color: white;
 }
@@ -91,7 +93,7 @@ nav {
     border-radius: 5px;
     box-sizing: border-box;
     
-    /* VITAL FIX: Explicitly set background and text color for form inputs */
+    /* FIX: Explicitly set background and text color for form inputs */
     background-color: white; 
     color: #333; /* Dark text color for contrast */
 }
@@ -113,4 +115,34 @@ nav {
 .form-container .auth-button {
     width: 100%;
     margin-top: 10px;
+}
+
+/* --- 5. Learning Hub Page Styling (For learn.html) --- */
+.learning-options ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.learning-options li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.learning-options li:hover {
+    background-color: rgba(0, 128, 128, 0.3); /* Teal hover effect */
+}
+
+.option-icon {
+    width: 30px; /* Size for the small photo */
+    height: 30px;
+    object-fit: contain; /* Ensures the image fits nicely */
+    margin-right: 15px;
+    border-radius: 4px;
 }
