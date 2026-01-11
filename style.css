@@ -164,3 +164,60 @@ nav {
     margin-right: 20px; /* More space between image and text */
     border-radius: 4px;
 }
+/* --- 6. French Path Styling --- */
+.path-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.path-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Staggering the path */
+.step-left { align-items: flex-start; padding-left: 20%; }
+.step-center { align-items: center; }
+.step-right { align-items: flex-end; padding-right: 20%; }
+
+.lesson-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lesson-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Pretty Colors */
+.teal-btn { background-color: #008080; }
+.blue-btn { background-color: #0077be; }
+.green-btn { background-color: #50C878; }
+
+/* Locked Lesson style */
+.lesson-button.locked {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.lesson-label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
